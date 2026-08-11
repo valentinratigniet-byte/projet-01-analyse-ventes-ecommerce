@@ -1,0 +1,7 @@
+# Données Olist (~120 Mo) : non versionnées — voir README pour les télécharger.
+data/*.csv
+data/*.zip
+
+# Secrets
+.env
+kaggle.json
