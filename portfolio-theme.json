@@ -44,6 +44,34 @@
         "background": [ { "color": { "solid": { "color": "#F4F6F8" } }, "transparency": 0 } ],
         "outspace":   [ { "color": { "solid": { "color": "#F4F6F8" } }, "transparency": 0 } ]
       }
+    },
+    "button": {
+      "*": {
+        "fill": [
+          { "$id": "default", "show": true, "fillColor": { "solid": { "color": "#137A8B" } }, "transparency": 0 },
+          { "$id": "hover",   "show": true, "fillColor": { "solid": { "color": "#0C5563" } }, "transparency": 0 },
+          { "$id": "pressed", "show": true, "fillColor": { "solid": { "color": "#E4A93C" } }, "transparency": 0 }
+        ],
+        "text": [
+          { "$id": "default", "show": true, "fontColor": { "solid": { "color": "#FFFFFF" } }, "fontSize": 11, "bold": true },
+          { "$id": "hover",   "show": true, "fontColor": { "solid": { "color": "#FFFFFF" } } },
+          { "$id": "pressed", "show": true, "fontColor": { "solid": { "color": "#1C2733" } } }
+        ],
+        "outline": [ { "$id": "default", "show": false } ]
+      }
+    },
+    "pageNavigator": {
+      "*": {
+        "fill": [
+          { "$id": "default",  "show": true, "fillColor": { "solid": { "color": "#137A8B" } } },
+          { "$id": "hover",    "show": true, "fillColor": { "solid": { "color": "#0C5563" } } },
+          { "$id": "selected", "show": true, "fillColor": { "solid": { "color": "#E4A93C" } } }
+        ],
+        "text": [
+          { "$id": "default",  "show": true, "fontColor": { "solid": { "color": "#FFFFFF" } }, "bold": true },
+          { "$id": "selected", "show": true, "fontColor": { "solid": { "color": "#1C2733" } }, "bold": true }
+        ]
+      }
     }
   }
 }

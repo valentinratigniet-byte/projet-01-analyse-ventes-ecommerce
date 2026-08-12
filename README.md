@@ -48,10 +48,10 @@ docker exec -i p07_ecommerce_db psql -U portfolio -d ecommerce < sql/03_kpi.sql
 
 ## 📊 Dashboard
 
-Les vues nettoyées (`olist.v_*`) sont prêtes à être branchées dans Power BI
-(connecteur PostgreSQL) pour un tableau de bord décisionnel — même méthode que le
-[Projet 09](https://github.com/valentinratigniet-byte/projet-09-dashboard-powerbi),
-identité couleur « Petrol & Ambre ».
+Dashboard **`dashboard-olist.pbix`** : modèle en étoile (`olist.bi_*`), 18 mesures
+DAX, jauge de rétention, carte du Brésil, identité « Petrol & Ambre »
+(`portfolio-theme.json`). Modèle entièrement documenté (in-situ) — dictionnaire :
+[docs/data-dictionary.md](docs/data-dictionary.md).
 
 ## 📄 Données & licence
 
