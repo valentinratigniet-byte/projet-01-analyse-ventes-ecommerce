@@ -7,6 +7,14 @@
 
 Données : **Olist Brazilian E-Commerce** (~100 k commandes, 2016-2018).
 
+## 📸 Aperçu du dashboard
+
+**Page 1 — Vue d'ensemble des ventes**
+![Dashboard Olist — vue d'ensemble](outputs/page1-vue-ensemble.png)
+
+**Page 2 — Satisfaction & rétention**
+![Dashboard Olist — satisfaction & rétention](outputs/page2-satisfaction.png)
+
 ## 🔎 Réponse en 4 points (voir [docs/insights.md](docs/insights.md))
 
 1. **La baisse est réelle mais modérée** : pic à 978 k R$ (mai 2018), puis −14 %
