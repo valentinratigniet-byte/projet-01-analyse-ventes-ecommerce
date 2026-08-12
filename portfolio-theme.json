@@ -1,0 +1,49 @@
+{
+  "name": "Portfolio Data — Petrol & Ambre",
+  "dataColors": [
+    "#137A8B",
+    "#E4A93C",
+    "#4E8FA6",
+    "#B4763B",
+    "#7FB0A5",
+    "#375A6B",
+    "#9AAEB8",
+    "#C58A4B"
+  ],
+  "foreground": "#1C2733",
+  "foregroundNeutralSecondary": "#5E6B7A",
+  "foregroundNeutralTertiary": "#9AAEB8",
+  "background": "#FFFFFF",
+  "backgroundLight": "#F4F6F8",
+  "backgroundNeutral": "#DCE2E8",
+  "tableAccent": "#137A8B",
+  "good": "#2FA36B",
+  "neutral": "#E8A13A",
+  "bad": "#D9534F",
+  "maximum": "#0C5563",
+  "center": "#7FB0A5",
+  "minimum": "#EAF1F2",
+  "null": "#9AAEB8",
+  "hyperlink": "#137A8B",
+  "textClasses": {
+    "title":   { "fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#0C5563" },
+    "header":  { "fontFace": "Segoe UI Semibold", "fontSize": 12, "color": "#1C2733" },
+    "label":   { "fontFace": "Segoe UI", "fontSize": 10, "color": "#1C2733" },
+    "callout": { "fontFace": "Segoe UI Semibold", "fontSize": 28, "color": "#137A8B" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [ { "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 } ],
+        "border":     [ { "show": true, "color": { "solid": { "color": "#DCE2E8" } }, "radius": 8 } ],
+        "dropShadow": [ { "show": true, "color": { "solid": { "color": "#1C2733" } }, "position": "Outer", "preset": "Custom", "shadowSpread": 2, "shadowBlur": 10, "transparency": 92, "angle": 90 } ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [ { "color": { "solid": { "color": "#F4F6F8" } }, "transparency": 0 } ],
+        "outspace":   [ { "color": { "solid": { "color": "#F4F6F8" } }, "transparency": 0 } ]
+      }
+    }
+  }
+}
