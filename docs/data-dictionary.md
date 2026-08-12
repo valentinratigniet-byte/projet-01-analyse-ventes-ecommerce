@@ -56,7 +56,8 @@ Relations 1→* à sens unique depuis les dimensions vers `bi_fct_sales`.
 |---|---|---|
 | customer_key | texte | Clé du **compte** (un par commande chez Olist). |
 | customer_unique_id | texte | Identifiant de la **personne** → base de la rétention. |
-| state | texte | État brésilien (ex. SP). Catégorisé « État/province » pour la carte. |
+| state | texte | Code de l'état brésilien (ex. SP). Catégorisé « État/province ». |
+| state_name | texte | Nom complet de l'état (SP → São Paulo). Lisible, pour carte/légendes. |
 | city | texte | Ville du client. |
 
 ### `bi_dim_date` — calendrier (marquée table de dates)
