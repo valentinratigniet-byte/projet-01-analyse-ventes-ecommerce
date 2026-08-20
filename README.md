@@ -28,6 +28,18 @@ Données : **Olist Brazilian E-Commerce** (~100 k commandes, 2016-2018).
 
 ## 🧱 Démarche
 
+```mermaid
+flowchart LR
+    Q["Question métier<br/>pourquoi le CA baisse ?"] --> RAW[("7 tables TEXT<br/>chargement brut")]
+    RAW -->|typage, traduction| CLEAN[("Vues nettoyées<br/>+ délais calculés")]
+    CLEAN --> KPI["7 requêtes KPI"]
+    KPI --> DASH["Dashboard Power BI<br/>étoile, 18 mesures"]
+    KPI --> REC["4 recommandations<br/>chiffrées"]
+
+    style DASH fill:#137A8B,color:#fff
+    style Q fill:#E4A93C,color:#1a1a1a
+```
+
 | Étape | Fichier | Ce qui est fait |
 |---|---|---|
 | Chargement brut | [`sql/01_schema.sql`](sql/01_schema.sql) | 7 tables Olist en TEXT (on ne fait pas confiance à la source) |
