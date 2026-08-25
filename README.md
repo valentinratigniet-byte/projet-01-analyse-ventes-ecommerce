@@ -81,4 +81,4 @@ Attribution : *Olist, Brazilian E-Commerce Public Dataset (Kaggle)*.
 
 ---
 
-*Projet 01 du [Portfolio Data](../). Étude métier de bout en bout sur données réelles.*
+*Projet 01 du [Portfolio Data](https://github.com/valentinratigniet-byte). Étude métier de bout en bout sur données réelles.*
