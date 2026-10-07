@@ -130,8 +130,8 @@ docker exec -i p07_ecommerce_db psql -U portfolio -d ecommerce < sql/03_kpi.sql
 ## 📊 Dashboard
 
 Dashboard **`dashboard-olist.pbix`** : modèle en étoile (`olist.bi_*`), 18 mesures
-DAX, jauge de rétention, carte du Brésil, identité « Petrol & Ambre »
-(`portfolio-theme.json`). Modèle entièrement documenté (in-situ) — dictionnaire :
+DAX, jauge de rétention, carte du Brésil, charte « Petrol & Ambre v2 » du portfolio
+(`portfolio-theme.json` : palette + mise en forme ; bandeau, tuiles KPI, segments compacts). Modèle entièrement documenté (in-situ) — dictionnaire :
 [docs/data-dictionary.md](docs/data-dictionary.md).
 
 ## 📄 Données & licence
