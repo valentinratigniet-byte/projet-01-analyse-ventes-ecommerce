@@ -1,5 +1,7 @@
 # Projet 01 — Analyse des ventes e-commerce (Olist)
 
+[![CI](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce/actions/workflows/ci.yml/badge.svg)](https://github.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce/actions/workflows/ci.yml)
+
 > **« Les ventes ont chuté — pourquoi ? »** Le travail d'un Data Analyst ne commence
 > pas par Excel mais par une **question métier**. Cette analyse part d'une baisse
 > constatée, l'explique avec les données, et débouche sur des **recommandations

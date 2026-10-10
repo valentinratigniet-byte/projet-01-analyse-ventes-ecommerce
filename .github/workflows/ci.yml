@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  analyse-olist:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: portfolio
+          POSTGRES_PASSWORD: portfolio
+          POSTGRES_DB: ecommerce
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-retries 10
+    env:
+      PGHOST: localhost
+      PGUSER: portfolio
+      PGPASSWORD: portfolio
+      PGDATABASE: ecommerce
+    steps:
+      - uses: actions/checkout@v4
+
+      # Données Olist (Kaggle, CC BY-NC-SA) : non versionnées, téléchargées à chaque run
+      - name: Télécharger le dataset Olist
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          pip install kaggle
+          kaggle datasets download -d olistbr/brazilian-ecommerce -p data --unzip
+
+      - name: Charger le brut (01_schema + \copy)
+        run: |
+          psql -v ON_ERROR_STOP=1 -f sql/01_schema.sql
+          psql -v ON_ERROR_STOP=1 <<'SQL'
+          \copy olist.customers from 'data/olist_customers_dataset.csv' with (format csv, header true)
+          \copy olist.orders from 'data/olist_orders_dataset.csv' with (format csv, header true)
+          \copy olist.order_items from 'data/olist_order_items_dataset.csv' with (format csv, header true)
+          \copy olist.products from 'data/olist_products_dataset.csv' with (format csv, header true)
+          \copy olist.reviews from 'data/olist_order_reviews_dataset.csv' with (format csv, header true)
+          \copy olist.payments from 'data/olist_order_payments_dataset.csv' with (format csv, header true)
+          \copy olist.category_translation from 'data/product_category_name_translation.csv' with (format csv, header true)
+          SQL
+
+      - name: Nettoyer, analyser, construire l'étoile Power BI
+        run: |
+          psql -v ON_ERROR_STOP=1 -f sql/02_clean.sql
+          psql -v ON_ERROR_STOP=1 -f sql/03_kpi.sql > /dev/null
+          psql -v ON_ERROR_STOP=1 -f sql/04_star_powerbi.sql
+
+      - name: Contrôler les constats du README (97 % one-shot, SP 38 %, étoile sans orphelin)
+        run: psql -v ON_ERROR_STOP=1 -f sql/05_checks.sql
