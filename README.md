@@ -9,6 +9,8 @@
 
 Données : **Olist Brazilian E-Commerce** (~100 k commandes, 2016-2018).
 
+🗺️ **[Schéma du dépôt (GitDiagram)](https://gitdiagram.com/valentinratigniet-byte/projet-01-analyse-ventes-ecommerce)** : vue d'ensemble générée automatiquement à partir du code.
+
 ## 📸 Aperçu du dashboard
 
 **Page 1 — Vue d'ensemble des ventes**
