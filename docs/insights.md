@@ -8,7 +8,7 @@ et que faire ? »
 
 Après une croissance continue et un pic à **978 k R$ en mai 2018**, le CA a
 **reculé 3 mois de suite** (juin → août) pour finir à **839 k R$**, soit **−14 %
-sous le pic**. Le pic de **novembre 2017 (+36 % sur un mois)** correspond au
+sous le pic**. Le pic de **novembre 2017 (+52 % sur un mois)** correspond au
 **Black Friday** — un effet saisonnier, pas une tendance de fond.
 
 ## 2. La baisse n'est PAS un problème de qualité
